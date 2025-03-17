@@ -38,7 +38,7 @@ export default function Edit() {
 
     const fetchTransaction = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/transctions?id=${id}`);
+        const response = await axios.get(`https://personal-finances-two.vercel.app/api/transctions?id=${id}`);
         const transaction = response.data;
 
         // Prefill form fields
@@ -59,7 +59,7 @@ export default function Edit() {
   // Submit updated transaction
   const onSubmit = async (data) => {
     try {
-      await axios.put("http://localhost:3000/api/transctions", data);
+      await axios.put("https://personal-finances-two.vercel.app/api/transctions", data);
       setMessage({ type: "success", text: "Transaction updated successfully!" });
       setTimeout(() => navigate("/transactions"), 2000); // Redirect after success
     } catch (error) {
