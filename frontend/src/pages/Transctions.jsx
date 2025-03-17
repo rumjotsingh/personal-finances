@@ -26,7 +26,7 @@ export default function Transactions() {
   const fetchTransactions = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:3000/api/transctions");
+      const response = await axios.get("https://personal-finances-two.vercel.app/api/transctions");
       setTransactions(response.data);
     } catch (error) {
       console.error("Error fetching transactions:", error);
@@ -42,7 +42,7 @@ export default function Transactions() {
   // Delete Transaction & Fetch Latest Data
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/transctions?id=${id}`);
+      await axios.delete(`https://personal-finances-two.vercel.app/api/transctions?id=${id}`);
       fetchTransactions(); // ✅ Fetch latest transactions after delete
     } catch (error) {
       console.error("Error deleting transaction:", error);
