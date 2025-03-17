@@ -113,7 +113,7 @@ export default function Transactions() {
                     ₹{transaction.amount.toLocaleString()}
                   </td>
                   <td className="p-3">
-                    <Button onClick={() => navigate("/dashboard")} variant="outline">
+                    <Button onClick={() => navigate("/transactions")} variant="outline">
                       Add
                     </Button>
                   </td>
