@@ -34,7 +34,7 @@ export default function TransactionForm() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post("http://localhost:3000/api/transctions", data);
+      const response = await axios.post("https://personal-finances-two.vercel.app/api/transctions", data);
       console.log("Transaction added:", response.data);
       setMessage({ type: "success", text: "Transaction added successfully!" });
       reset(); // Clear form after success
