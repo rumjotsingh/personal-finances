@@ -17,7 +17,7 @@ export default function Hero() {
           <p className="text-xl mb-8 text-gray-200">
             Manage your expenses, track your savings, and plan for the future with ease.
           </p>
-          <Button onClick={()=>{handleClick()}}>
+          <Button variant="outline"  onClick={()=>{handleClick()}}>
             Get Started
         </Button>
         </div>
