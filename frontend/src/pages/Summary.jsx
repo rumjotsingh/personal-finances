@@ -11,11 +11,11 @@ export default function SummaryCard() {
     const fetchData = async () => {
       try {
         // Fetch total expenses summary
-        const summaryRes = await axios.get("http://localhost:3000/api/summary");
+        const summaryRes = await axios.get("https://personal-finances-two.vercel.app/api/summary");
         setSummary(summaryRes.data);
 
         // Fetch recent transactions
-        const recentRes = await axios.get("http://localhost:3000/api/recent");
+        const recentRes = await axios.get("https://personal-finances-two.vercel.app/api/recent");
         setRecentTransactions(recentRes.data);
       } catch (error) {
         console.error("Error fetching data:", error);
