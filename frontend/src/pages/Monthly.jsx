@@ -10,7 +10,7 @@ const MonthlyExpensesChart = () => {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/monthly");
+        const response = await axios.get("https://personal-finances-two.vercel.app/api/monthly");
         console.log("API Response:", response.data); // Debugging log
         setData(response.data); // Directly use API data
       } catch (error) {
